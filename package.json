@@ -1,5 +1,5 @@
 {
-	"name": "writer",
+	"name": "@ajwdmedia/writer",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -7,6 +7,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"sync": "svelte-kit sync",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {

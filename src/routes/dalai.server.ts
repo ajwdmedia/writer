@@ -23,7 +23,7 @@ export const dalai = new Dalai() as {
 };
 
 export const request = (prompt: string, params: Omit<DalaiRequest, "prompt" | "model" | "url" | "skip_end">) => {
-    return new Promise(( resolve, reject ) => {
+    return new Promise<string>(( resolve, reject ) => {
         let output = "";
 
         dalai.request({

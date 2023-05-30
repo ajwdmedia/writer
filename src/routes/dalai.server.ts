@@ -11,7 +11,6 @@ type DalaiRequest = {
     repeat_last_n: number,
     repeat_penalty: number,
     temp: number,
-    batch_size: number,
     skip_end: boolean,
 
 }

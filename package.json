@@ -13,6 +13,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.5.0",
+		"sass": "^1.62.1",
 		"svelte": "^3.54.0",
 		"svelte-check": "^3.0.1",
 		"tslib": "^2.4.1",
@@ -21,9 +22,13 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@ajwdmedia/svelterial-icons": "^0.1.2",
 		"@ajwdmedia/useful": "^0.2.0",
+		"@llama-node/llama-cpp": "^0.1.6",
 		"better-sqlite3": "^8.4.0",
 		"dalai": "^0.3.1",
-		"quick.db": "^9.1.6"
+		"llama-node": "^0.1.6",
+		"quick.db": "^9.1.6",
+		"svelte-loading-spinners": "^0.3.4"
 	}
 }

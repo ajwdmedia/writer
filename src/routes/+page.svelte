@@ -10,14 +10,17 @@
     import { stories } from "$lib/stores";
     import { listStories } from "$lib/story";
     import { onMount } from "svelte";
+    import { Toaster } from "svelte-french-toast";
 
 
     let loading = false;
 
     const ready = async () => {
-        loading = false;
         $stories = await listStories();
+        loading = false;
     }
+
+    let focus: () => any;
 
     // FOR DEBUG ONLY
 
@@ -30,11 +33,11 @@
 </div>
 
 <div class="writer">
-    <Writer />
+    <Writer bind:focus={focus} />
 </div>
 
 <div class="builder">
-    <Builder />
+    <Builder on:focus-writer={focus()} />
 </div>
 
 {#if loading}
@@ -44,6 +47,8 @@
 
 </div>
 {/if}
+
+<Toaster />
 
 <style lang="scss">
 
@@ -75,6 +80,7 @@
         padding: 1rem;
         border: 1px solid hsl(233, 45%, 25%);
         border-radius: 1rem;
+        position: relative;
     }
 
     .dialog {

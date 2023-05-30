@@ -25,9 +25,11 @@ export const request = (prompt: string, params: Omit<DalaiRequest, "prompt" | "m
     return new Promise<string>(( resolve, reject ) => {
         let output = "";
 
+        return resolve("This is a test");// TODO: TESTING PURPOSES
+
         dalai.request({
             prompt: prompt,
-            model: "alpaca.7B",
+            model: "llama.7B",
             skip_end: false,
             ...params
         }, (token) => {

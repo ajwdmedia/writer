@@ -1,7 +1,7 @@
 <script lang="ts">
 
     import { stories } from "$lib/stores";
-    import { createStory } from "$lib/story";
+    import { createStory, loadStory } from "$lib/story";
 
     const create = async () => {
         const story = await createStory();
@@ -18,7 +18,7 @@
 
     {#each $stories as story}
 
-    <div class="card">
+    <div class="card" on:click={() => loadStory(story.id)} on:keypress={() => loadStory(story.id)}>
         {story.title}
     </div>
 

@@ -7,7 +7,7 @@ import type { Story } from "$lib/story-types";
 
 export const GET = (async () => {
     
-    let keys = await stories.all();
+    const keys = await stories.all();
 
     return json(keys.map(it => { return { id: it.id, title: it.value.title } }));
 

@@ -2,7 +2,7 @@ import { request as dalaiRequest } from "../../dalai.server"
 import { json } from "@sveltejs/kit"
 import type { RequestHandler } from "./$types"
 
-export const GET = (async ({ request }) => {
+export const POST = (async ({ request }) => {
     const body = await request.json();
 
     let prompt = `Remembering "${body.memory}", and abiding by the following direction: "${body.direction}", continue this story: "${body.prompt}"\n\n "`;

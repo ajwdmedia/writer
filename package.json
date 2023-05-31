@@ -11,7 +11,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-node": "^1.2.4",
 		"@sveltejs/kit": "^1.5.0",
 		"sass": "^1.62.1",
 		"svelte": "^3.54.0",
@@ -24,10 +24,8 @@
 	"dependencies": {
 		"@ajwdmedia/svelterial-icons": "^0.1.2",
 		"@ajwdmedia/useful": "^0.2.0",
-		"@llama-node/llama-cpp": "^0.1.6",
 		"better-sqlite3": "^8.4.0",
 		"dalai": "^0.3.1",
-		"llama-node": "^0.1.6",
 		"quick.db": "^9.1.6",
 		"svelte-french-toast": "^1.0.4-beta.0",
 		"svelte-loading-spinners": "^0.3.4",
